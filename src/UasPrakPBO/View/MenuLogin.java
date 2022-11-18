@@ -56,21 +56,23 @@ public class MenuLogin {
         login.setBounds(190, 300, 120, 40);
         login.setEnabled(true);
         
-//        kembali.getActionListeners(new ActionListener(){
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                new MainMenu();
-//            }
-//        });
+        kembali.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu();
+                view.setVisible(false);
+                
+            }
+        });
 
-//        login.getActionListeners(new ActionListener(){
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                UserController uc = new UserController();
-//                uc.mencariUser(txtUsername.getText(), txtPassword.getText());
-//                System.exit(0);
-//            }
-//        });
+        login.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UserController uc = new UserController();
+                uc.mencariUser(txtUsername.getText(), txtPassword.getText());
+                System.exit(0);
+            }
+        });
         
         view.add(gambar);
         view.add(title);
@@ -81,8 +83,5 @@ public class MenuLogin {
         view.add(kembali);
         view.add(login);
         view.setVisible(true);
-    }
-    public static void main(String[] args) throws IOException {
-        new MenuLogin();
     }
 }

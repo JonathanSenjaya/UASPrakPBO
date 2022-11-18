@@ -49,7 +49,6 @@ public class MainMenu {
             public void actionPerformed(ActionEvent e) {
                 new MenuRegistrasi();
             }
-            
         });
 
         view.add(login);
@@ -59,8 +58,4 @@ public class MainMenu {
         view.setVisible(true);
 
     }
-
-//    public static void main(String[] args) {
-//        new MainMenu();
-//    }
 }

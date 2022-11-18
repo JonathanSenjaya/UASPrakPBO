@@ -5,6 +5,7 @@
  */
 package UasPrakPBO.View;
 
+import UasPrakPBO.Model.User;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,6 +19,7 @@ import javax.swing.*;
  */
 public class MenuRegistrasi {
     public MenuRegistrasi(){
+        User user = null;
         JFrame view = new JFrame();
         view.setSize(510, 600);
         view.setLocationRelativeTo(null);
@@ -103,7 +105,6 @@ public class MenuRegistrasi {
                 new MainMenu();
                 System.exit(0);
             }
-            
         });
         
         view.add(title);
@@ -123,8 +124,5 @@ public class MenuRegistrasi {
         view.add(businessAccount);
         view.add(kembali);
         view.add(register);
-    }
-    public static void main(String[] args) {
-        new MenuRegistrasi();
     }
 }
